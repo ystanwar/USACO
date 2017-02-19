@@ -80,7 +80,7 @@ for(int i=0;i<n;i++)
             fin>>fri;
             int pos=getid(fri,n)-1;
             v[pos].m=v[pos].m+mon;
-          //  cout<<v[pos].name<<"-"<<v[pos].m<<"<-->";
+        
         }
 cout<<endl;
       }
