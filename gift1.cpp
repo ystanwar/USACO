@@ -1,7 +1,7 @@
 
 /*
 ID: ystanwar
-PROG: gift
+PROG: gift1
 LANG: C++
 */
 #include <iostream>
@@ -35,18 +35,12 @@ int getid(string s,int n)
     return -1;
 
 }
-int display(int n)
-{
- for(int i=0;i<n;i++)
-    {
-                int ans=v[i].m-v[i].p;
-               cout<<v[i].name<<" "<<ans<<" "<<v[i].p<<endl;
 
-    }
-}
+
+
 int main() {
-    ofstream fout ("gift.out");
-    ifstream fin ("gift.in");
+    ofstream fout ("gift1.out");
+    ifstream fin ("gift1.in");
 
 	int n;
 	fin>>n;
@@ -79,7 +73,7 @@ for(int i=0;i<n;i++)
         int mon=(m-m%nof)/nof;
 
         v[don].m=v[don].m-(mon*nof);
-       cout<<v[don].name<<"-"<<v[don].m<<"<-->"<<v[don].p<<"--------";
+      // cout<<v[don].name<<"-"<<v[don].m<<"<-->"<<v[don].p<<"--------";
         for(int j=0;j<nof;j++)
         {
             string fri;
@@ -91,7 +85,13 @@ for(int i=0;i<n;i++)
 cout<<endl;
       }
 }
-display(n);
+
+ for(int i=0;i<n;i++)
+    {
+                int ans=v[i].m-v[i].p;
+                fout<<v[i].name<<" "<<ans<<endl;
+
+    }
 
     return 0;
 }

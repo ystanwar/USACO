@@ -14,7 +14,7 @@ int day[7];
 
 void calc(int d,int j)
 {
-    int mod=(d+j)%7;
+    int mod=(d+j+1)%7;
 
 switch(mod){
     case 0:
@@ -51,9 +51,9 @@ int main() {
     ifstream fin ("friday.in");
 
 int n;
-cin>>n;
+fin>>n;
 
-int y=1990+n;
+int y=1900+n;
 
 for (int i=0;i<7;i++)
 {
@@ -63,7 +63,7 @@ int i=0;
 int j1=-1;
 int leap=0;
 int days;
-for(int j=1990;j<y;j++)
+for(int j=1900;j<y;j++)
 {
     j1++;
     leap=0;
@@ -175,11 +175,13 @@ for(int j=1990;j<y;j++)
              j1++;
         }
 }
-for(int i=0;i<7;i++)
+for(int i=0;i<6;i++)
 {
-cout<<day[i]<<" ";
+
+fout<<day[i]<<" ";
 
 }
+fout<<day[6]<<endl;
 
 
 
